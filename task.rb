@@ -34,7 +34,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-   p sports.compact
+   p sports.compact!
 end
 
 def q5
@@ -57,15 +57,17 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  p array.map!{|n|n.to_i}
 end
 
 def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
-  # 以下は変更しないで下さい
+   programming_languages.map{|language|language.capitalize!}
+   upper_case_programming_languages = %w(ruby php python javascript)
+   upper_case_programming_languages.map{|language|language.upcase!}
+   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
 end
